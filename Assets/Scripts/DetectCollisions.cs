@@ -9,4 +9,9 @@ public class DetectCollisions : MonoBehaviour
     {
         Destroy(gameObject);   
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision);
+    }
 }
