@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4787033894845071119}
   - component: {fileID: 4787033893457388871}
   - component: {fileID: -3030570195083560737}
+  - component: {fileID: 7609208498388191032}
+  - component: {fileID: -4566982505731389821}
   m_Layer: 0
   m_Name: Food
   m_TagString: Untagged
@@ -33,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4787033894844104143
 MeshFilter:
@@ -110,4 +112,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd12a6c33d6e684409b5dc9520e8c5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topBounds: 30
+--- !u!65 &7609208498388191032
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4787033894842802639}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4597009, y: 0.13234863, z: 0.55363166}
+  m_Center: {x: 0, y: 0, z: -0.0000001937151}
+--- !u!54 &-4566982505731389821
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4787033894842802639}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
