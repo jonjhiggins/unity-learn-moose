@@ -11,10 +11,6 @@ public class PlayerController : MonoBehaviour
     public float zRange = 3;
     public GameObject projectilePrefab;
     private Vector3 projectileOffest = new Vector3(0, 0, 1.5f);
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()

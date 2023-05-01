@@ -6,10 +6,11 @@ public class DestroyOutOfBounds : MonoBehaviour
 {
     private float topBounds = 30;
     private float lowerBounds = -10;
+    private ScoreManager scoreManager;
 
-    void Start()
+    private void Start()
     {
-        
+        scoreManager = GameObject.FindObjectOfType<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -21,7 +22,7 @@ public class DestroyOutOfBounds : MonoBehaviour
         } else if (transform.position.z < lowerBounds)
         {
             Destroy(gameObject);
-            Debug.Log("Game over!");
+            scoreManager.DecreaseLives();
         }
     }
 }

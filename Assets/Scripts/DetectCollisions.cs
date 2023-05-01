@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+    private ScoreManager scoreManager;
+
+    private void Start()
+    {
+        scoreManager = GameObject.FindObjectOfType<ScoreManager>();
+    }
+
     // Start is called before the first frame update
     void OnTriggerEnter(Collider collider)
     {
@@ -11,12 +18,12 @@ public class DetectCollisions : MonoBehaviour
 
         if (collider.tag == "Player")
         {
-            Debug.Log("Game over!!");
+            scoreManager.DecreaseLives();
         }
-    }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision);
+        if (collider.tag == "Pizza")
+        {
+            scoreManager.IncreaseScore();
+        }
     }
 }
