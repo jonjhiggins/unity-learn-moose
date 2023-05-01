@@ -14,10 +14,10 @@ public class SpawnManager : MonoBehaviour
     void SpawnNewAmimal()
     {
         int animalIndex = Random.Range(0, animalPrefabs.Length);
-        int sideIndex = Random.Range(0, 4);
+        int sideIndex = Random.Range(0, 3);
         Vector3 spawnPosTop = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
-        Vector3 spawnPosLeft = new Vector3(-spawnRangeX, 0, Random.Range(-spawnRangeZ, spawnRangeZ));
-        Vector3 spawnPosRight = new Vector3(spawnRangeX, 0, Random.Range(-spawnRangeZ, spawnRangeZ));
+        Vector3 spawnPosLeft = new Vector3(-spawnRangeX, 0, Random.Range(0, spawnRangeZ));
+        Vector3 spawnPosRight = new Vector3(spawnRangeX, 0, Random.Range(0, spawnRangeZ));
         Quaternion topRotation = Quaternion.Euler(0.0f, 0, 0.0f);
         Quaternion leftRotation = Quaternion.Euler(0.0f, -90.0f, 0.0f);
         Quaternion rightRotation = Quaternion.Euler(0.0f, 90.0f, 0.0f);
