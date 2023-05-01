@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float xRange = 10;
     public float zRange = 3;
     public GameObject projectilePrefab;
+    private Vector3 projectileOffest = new Vector3(0, 0, 1.5f);
     void Start()
     {
 
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown("space"))
         {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, transform.position + projectileOffest, projectilePrefab.transform.rotation);
         }
     }
 }
